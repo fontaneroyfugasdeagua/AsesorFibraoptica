@@ -66,6 +66,92 @@
             0%, 100% { transform: translateY(0); }
             50% { transform: translateY(-5px); }
         }
+
+        /* Estilo de la promoción especial de Mamá */
+        .promo-mama-bg {
+            background-image: linear-gradient(135deg, #FF69B4, #FFB6C1);
+            position: relative;
+            overflow: hidden;
+        }
+        .promo-mama-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><path fill="%23FFC0CB" opacity="0.3" d="M50 82.5l-32.5-32.5c-11.4-11.4-11.4-30 0-41.4s30-11.4 41.4 0l32.5 32.5c11.4 11.4 11.4 30 0 41.4s-30 11.4-41.4 0z"/></svg>');
+            background-size: 20px 20px;
+            animation: heart-flow 20s infinite linear;
+        }
+
+        @keyframes heart-flow {
+            0% { background-position: 0 0; }
+            100% { background-position: 100% 100%; }
+        }
+    </style>
+</head>
+<body class="dark-red-gradient-bg text-gray-200 font-sans">
+
+    <!-- Botones flotantes de WOW -->
+    <a href="tel:+50612345678" class="fixed right-4 bottom-4 z-50 floating-button" aria-label="Llamar">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-white group hover:bg-gray-100">
+            <i class="fas fa-phone-alt text-2xl text-red-600 transition-colors group-hover:text-red-700"></i>
+            <span class="absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-bold text-white bg-red-600 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">¡Wow!</span>
+        </div>
+    </a>
+    <a href="https://wa.me/50612345678" target="_blank" class="fixed right-4 bottom-24 z-50 floating-button" aria-label="WhatsApp">
+        <div class="relative w-16 h-16 rounded-full flex items-center justify-center shadow-lg bg-green-500 group hover:bg-green-600">
+            <i class="fab fa-whatsapp text-3xl text-white transition-colors group-hover:text-gray-100"></i>
+            <span class="absolute -top-6 left-1/2 -translate-x-1/2 px-2 py-1 text-xs font-bold text-white bg-green-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300">¡Wow!</span>
+        </div>
+    </a>
+
+    <!-- Hero Section -->
+    <header class="py-20 text-center px-4">
+        <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-transparent bg-clip-text" style="background-image: linear-gradient(to right, var(--accent-color), var(--highlight-color));">
+            Experimenta el Futuro de la Conexión
+        </h1>
+        <p class="mt-4 text-xl md:text-2xl font-light text-gray-100 max-w-3xl mx-auto">
+            Fibra óptica de ultra-velocidad y televisión digital HD que te dejarán sin aliento.
+        </p>
+        <div class="mt-8">
+            <p class="text-3xl md:text-4xl font-bold text-white px-6 py-4 rounded-xl shadow-lg bg-gradient-to-r from-red-600 to-red-700 transform hover:scale-105 transition-transform duration-300">
+                Adquiere tu plan solo con cédula, sin pagar nada hasta la próxima facturación. ¡Es el reto!
+            </p>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-16">
+
+        <!-- Sección de Promoción de Agosto para Mamá -->
+        <section class="mb-20">
+            <div class="promo-mama-bg p-8 rounded-3xl shadow-2xl text-center text-gray-800 relative z-10">
+                <h2 class="text-4xl md:text-5xl font-extrabold tracking-tight text-white mb-4 drop-shadow">
+                    Promocion para Mamá
+                </h2>
+                <div class="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-8">
+                    <p class="text-2xl md:text-3xl font-light text-white drop-shadow">
+                        <span class="font-bold text-gray-800">200MB</span> + TV HD
+                    </p>
+                    <p class="text-4xl md:text-5xl font-extrabold text-white drop-shadow">
+                        ₡23.100
+                    </p>
+                    <p class="text-2xl md:text-3xl font-light text-white drop-shadow">
+                        <span class="font-bold text-gray-800">Simétrico</span>
+                    </p>
+                </div>
+                <p class="mt-4 text-lg text-gray-800 font-medium">
+                    Precio especial por 12 meses, luego ₡25.600.
+                </p>
+                <a href="#" class="mt-8 inline-block px-10 py-4 text-center font-bold rounded-full bg-red-600 hover:bg-red-700 transition-colors duration-300 text-white transform hover:scale-105">
+                    ¡Adquirir Promoción!
+                </a>
+                <p class="mt-4 text-sm text-gray-600">
+                    <a href="#" class="underline hover:text-gray-800 transition-colors">Términos y Condiciones</a>
+                </p>
+            </div>
+        </section>
     </style>
 </head>
 <body class="dark-red-gradient-bg text-gray-200 font-sans">
